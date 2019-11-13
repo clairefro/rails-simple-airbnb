@@ -1,0 +1,58 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+h2, h3 {
+  font-size: 20px;
+}
+
+nav {
+  justify-content: space-between;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+  padding: 16px;
+}
+
+.flat-card {
+  width: 300px;
+  background-color: white;
+  box-shadow: 2px, 2px, 2px, #888888;
+}
+.flat-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.flat-card-footer {
+  padding: 16px;
+
+}
+
+.icons {
+  display: flex;
+
+}
+
+.flat-actions {
+  display: flex;
+}
+
+.action-link a {
+  margin-right: 8px;
+}

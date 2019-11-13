@@ -1,0 +1,36 @@
+<h1>Flats</h1>
+
+<div class="grid-container">
+  <% @flats.each do |f| %>
+    <div class="flat-card card">
+
+      <img src="https://source.unsplash.com/random" alt="flat photo">
+
+      <div class="flat-card-footer">
+        <div class="flat-details">
+           <h3><%= f.name %></h3>
+           <p><% f.description %></p>
+           <div class="icons">
+             <p><i class="fas fa-male"></i> <%= f.number_of_guests %></p>
+             <p><i class="fas fa-dollar-sign"></i> <%= f.price_per_night %></p>
+           </div>
+        </div>
+
+        <div class="flat-actions">
+          <div class="action-ink">
+            <%= link_to 'More info', flat_path(f) %>
+          </div>
+          <div class="action-link">
+            <%= link_to 'Edit', edit_flat_path(f) %>
+          </div>
+          <div class="action-link">
+            <%= link_to 'Remove', flat_path(f),  method: :delete, data: { confirm: "Are you sure you want to delete '#{f.name}'?" } %>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  <% end %>
+</div>
